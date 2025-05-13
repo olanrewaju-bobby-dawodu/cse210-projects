@@ -1,0 +1,15 @@
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\bin\Debug\net8.0\Sandbox.exe
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\bin\Debug\net8.0\Sandbox.deps.json
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\bin\Debug\net8.0\Sandbox.runtimeconfig.json
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\bin\Debug\net8.0\Sandbox.dll
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\bin\Debug\net8.0\Sandbox.pdb
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\obj\Debug\net8.0\Sandbox.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\obj\Debug\net8.0\Sandbox.AssemblyInfoInputs.cache
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\obj\Debug\net8.0\Sandbox.AssemblyInfo.cs
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\obj\Debug\net8.0\Sandbox.csproj.CoreCompileInputs.cache
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\obj\Debug\net8.0\Sandbox.sourcelink.json
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\obj\Debug\net8.0\Sandbox.dll
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\obj\Debug\net8.0\refint\Sandbox.dll
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\obj\Debug\net8.0\Sandbox.pdb
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\obj\Debug\net8.0\Sandbox.genruntimeconfig.cache
+c:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\sandbox\Sandbox\obj\Debug\net8.0\ref\Sandbox.dll
