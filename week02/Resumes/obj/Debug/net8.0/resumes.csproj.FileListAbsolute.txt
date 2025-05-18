@@ -1,0 +1,15 @@
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\bin\Debug\net8.0\resumes.exe
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\bin\Debug\net8.0\resumes.deps.json
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\bin\Debug\net8.0\resumes.runtimeconfig.json
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\bin\Debug\net8.0\resumes.dll
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\bin\Debug\net8.0\resumes.pdb
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\obj\Debug\net8.0\resumes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\obj\Debug\net8.0\resumes.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\obj\Debug\net8.0\resumes.AssemblyInfo.cs
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\obj\Debug\net8.0\resumes.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\obj\Debug\net8.0\resumes.sourcelink.json
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\obj\Debug\net8.0\resumes.dll
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\obj\Debug\net8.0\refint\resumes.dll
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\obj\Debug\net8.0\resumes.pdb
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\obj\Debug\net8.0\resumes.genruntimeconfig.cache
+C:\Users\USER\Desktop\MY_ASSESMENT\cse210-projects\week02\Resumes\obj\Debug\net8.0\ref\resumes.dll
