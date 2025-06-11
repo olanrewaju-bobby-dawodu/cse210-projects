@@ -26,6 +26,7 @@ class Program
             // Creativity', Selecting random scripture...
             Scripture currentScripture = scriptureLibrary[random.Next(scriptureLibrary.Count)];
 
+
             // Reseting scripture words to visible (new Scripture instance each loop helps with this)
             Console.Clear();
             Console.WriteLine("Memorize the scripture:");

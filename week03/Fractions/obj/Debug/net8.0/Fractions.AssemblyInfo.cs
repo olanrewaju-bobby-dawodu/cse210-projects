@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fractions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d5b22bac8b4260cfbdbcdc6595db1418ac2fef4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cef7614840ff4a94044a3f679fa35eb22c2626d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fractions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fractions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
