@@ -1,103 +1,140 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Represents a single item in an order
-public class OrderItem
+// Class representing a product in the order
+class Product
 {
-    private string itemName;
-    private int quantity;
-    private double pricePerUnit;
+    private string _name;
+    private string _productId;
+    private double _price;
+    private int _quantity;
 
-    public OrderItem(string itemName, int quantity, double pricePerUnit)
+    public Product(string name, string productId, double price, int quantity)
     {
-        this.itemName = itemName;
-        this.quantity = quantity;
-        this.pricePerUnit = pricePerUnit;
+        _name = name;
+        _productId = productId;
+        _price = price;
+        _quantity = quantity;
     }
 
     public double GetTotalPrice()
     {
-        return quantity * pricePerUnit;
+        return _price * _quantity;
     }
 
-    public void ShowItem()
+    public string GetName() => _name;
+    public string GetProductId() => _productId;
+}
+
+// Class representing a shipping address
+class Address
+{
+    private string _street;
+    private string _city;
+    private string _state;
+    private string _country;
+
+    public Address(string street, string city, string state, string country)
     {
-        Console.WriteLine($"{itemName} - Quantity: {quantity}, Price per unit: ${pricePerUnit:F2}");
+        _street = street;
+        _city = city;
+        _state = state;
+        _country = country;
+    }
+
+    public bool IsUSA()
+    {
+        return _country.ToLower() == "usa";
+    }
+
+    public string GetFullAddress()
+    {
+        return $"{_street}\n{_city}, {_state}\n{_country}";
     }
 }
 
-// Represents a customer placing an order
-public class Customer
+// Class representing a customer placing the order
+class Customer
 {
-    private string name;
-    private string email;
+    private string _name;
+    private Address _address;
 
-    public Customer(string name, string email)
+    public Customer(string name, Address address)
     {
-        this.name = name;
-        this.email = email;
+        _name = name;
+        _address = address;
     }
 
-    public void ShowCustomer()
-    {
-        Console.WriteLine($"Customer: {name}, Email: {email}");
-    }
+    public string GetName() => _name;
+    public Address GetAddress() => _address;
 }
 
-// Represents an order with encapsulated data
-public class Order
+// Class representing an order made by a customer
+class Order
 {
-    private Customer customer;
-    private List<OrderItem> items;
+    private Customer _customer;
+    private List<Product> _products;
 
-    public Order(Customer customer)
+    public Order(Customer customer, List<Product> products)
     {
-        this.customer = customer;
-        items = new List<OrderItem>();
+        _customer = customer;
+        _products = products;
     }
 
-    // Add item to order
-    public void AddItem(OrderItem item)
-    {
-        items.Add(item);
-    }
-
-    // Calculate total cost
-    public double GetTotalAmount()
+    public double GetTotalCost()
     {
         double total = 0;
-        foreach (var item in items)
+        foreach (var product in _products)
         {
-            total += item.GetTotalPrice();
+            total += product.GetTotalPrice();
         }
-        return total;
+
+        // Add shipping cost
+        double shipping = _customer.GetAddress().IsUSA() ? 5.0 : 35.0;
+        return total + shipping;
     }
 
-    // Show order summary
-    public void ShowOrder()
+    public string GetPackingLabel()
     {
-        customer.ShowCustomer();
-        Console.WriteLine("Order Items:");
-        foreach (var item in items)
+        string label = "";
+        foreach (var product in _products)
         {
-            item.ShowItem();
+            label += $"{product.GetName()} ({product.GetProductId()})\n";
         }
-        Console.WriteLine($"Total Amount: ${GetTotalAmount():F2}");
+        return label;
+    }
+
+    public string GetShippingLabel()
+    {
+        return $"{_customer.GetName()}\n{_customer.GetAddress().GetFullAddress()}";
     }
 }
 
-// Program to demonstrate usage
-public class Program2
+class Program
 {
-    public static void Main()
+    static void Main(string[] args)
     {
-        Customer customer = new Customer("Alice Johnson", "alice@example.com");
-        Order order = new Order(customer);
+        //Creating address and customer...
+        var address = new Address("456 Market St", "Boise", "ID", "USA");
+        var customer = new Customer("Jane Smith", address);
 
-        order.AddItem(new OrderItem("Laptop", 1, 999.99));
-        order.AddItem(new OrderItem("Wireless Mouse", 2, 25.50));
-        order.AddItem(new OrderItem("Keyboard", 1, 49.99));
+        // Creating product list
+        var products = new List<Product>
+        {
+            new Product("T-shirt", "T100", 15.00, 2),
+            new Product("Water Bottle", "W200", 10.00, 1)
+        };
 
-        order.ShowOrder();
+        // Creating the order...
+        var order = new Order(customer, products);
+
+        //Display labels and total...
+        Console.WriteLine("Packing Label:");
+        Console.WriteLine(order.GetPackingLabel());
+
+        Console.WriteLine("\nShipping Label:");
+        Console.WriteLine(order.GetShippingLabel());
+
+        Console.WriteLine($"\nTotal Cost: ${order.GetTotalCost():0.00}");
     }
 }

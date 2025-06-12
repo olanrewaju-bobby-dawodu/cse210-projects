@@ -1,56 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-
-// Represents a single YouTube Video
-public class YouTubeVideo
+﻿class Program
 {
-    // Attributes
-    private string title;
-    private string uploader;
-    private int durationInSeconds; // Duration of video
-
-    // Constructor
-    public YouTubeVideo(string title, string uploader, int durationInSeconds)
+    static void Main(string[] args)
     {
-        this.title = title;
-        this.uploader = uploader;
-        this.durationInSeconds = durationInSeconds;
-    }
+        List<Video> videos = new List<Video>();
 
-    // Behaviors (methods)
-    public void Play()
-    {
-        Console.WriteLine($"Playing '{title}' by {uploader}...");
-    }
+        //Video 1
+        Video v1 = new Video("C# Tutorial", "BYU-Academy", 600);
+        v1.AddComment(new Comment("Alice", "This was super helpful!"));
+        v1.AddComment(new Comment("Bob", "Great explanation."));
+        v1.AddComment(new Comment("Charlie", "Could you do a follow-up?"));
+        videos.Add(v1);
 
-    public void Pause()
-    {
-        Console.WriteLine($"Paused '{title}'.");
-    }
+        // Video 2
+        Video v2 = new Video("Understanding Abstraction", "DevInsights", 450);
+        v2.AddComment(new Comment("Diana", "Awesome content!"));
+        v2.AddComment(new Comment("Eli", "Abstraction finally makes sense."));
+        v2.AddComment(new Comment("Frank", "I love this channel."));
+        videos.Add(v2);
 
-    public void ShowInfo()
-    {
-        Console.WriteLine($"Title: {title}");
-        Console.WriteLine($"Uploader: {uploader}");
-        Console.WriteLine($"Duration: {durationInSeconds / 60}m {durationInSeconds % 60}s");
-    }
-}
+        // Video 3
+        Video v3 = new Video("Learn C# in 10 Minutes", "QuickLearner", 700);
+        v3.AddComment(new Comment("Grace", "Best quick tutorial."));
+        v3.AddComment(new Comment("Hank", "Very efficient, thanks!"));
+        v3.AddComment(new Comment("Ivan", "Perfect intro."));
+        videos.Add(v3);
 
-// Program to demonstrate usage
-public class Program1
-{
-    public static void Main()
-    {
-        YouTubeVideo video1 = new YouTubeVideo("Learning C# Basics", "CodeAcademy", 540);
-        YouTubeVideo video2 = new YouTubeVideo("Object-Oriented Programming", "TechWorld", 720);
-
-        video1.ShowInfo();
-        video1.Play();
-        video1.Pause();
-
-        Console.WriteLine();
-
-        video2.ShowInfo();
-        video2.Play();
+        //Displaying all videos and their comments...
+        foreach (var video in videos)
+        {
+            video.Display();
+        }
     }
 }
